@@ -31,23 +31,239 @@ require([
     let fieldSelect, classSelect, numClassesInput, slider;
     
      var popupQCEW = {
-        title: "{County} County Change<br>June 2019 to June 2020",
-        content:
-            "<b>All Industries:</b>  {TotalA} Jobs, {Total}%<br>"+
-            "<b> Goods-Producting:</b>  {GoodsA} Jobs, {Goods}%<br>"+
-            "<b>  Natural Resources & Mining:</b>  {NatResA} Jobs, {NatRes}%<br>"+
-            "<b>  Construction:</b>  {ConstA} Jobs, {Const}%<br>"+
-            "<b>  Manufacturing:</b>  {ManufA} Jobs, {Manuf}%<br>"+
-            "<b> Service-Producing</b>  {ServiceA} Jobs, {Service}%<br>"+
-            "<b>  Trade, Transportation & Utilities:</b>  {TradeA} Jobs, {Trade}%<br>"+
-            "<b>  Information:</b>  {InformA} Jobs, {Inform}%<br>"+
-            "<b>  Financial Activities:</b>  {FinanceA} Jobs, {Finance}%<br>"+
-            "<b>  Professional & Business Services:</b>  {ProfA} Jobs, {Prof}%<br>"+
-            "<b>  Education & Health:</b>  {EducationA} Jobs, {Education}%<br>"+
-            "<b>  Leisure & Hospitality:</b>  {LeisureA} Jobs, {Leisure}%<br>"+
-            "<b>  Other Services:</b>  {OtherServA} Jobs, {OtherServ}%<br>"/*+
-            "<b> Unclassified:</b>  {Unclass}%<br>"*/
-    };
+        title: "{County} County Grant Money 2010-2021",
+        content: [
+          {
+            type: "fields",
+            fieldInfos: [
+              {
+                fieldName: "TOTAL",
+                label: "All Grants",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "CCPI",
+                label: "Community Crime Prevention Initiative",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "CDBGED",
+                label: "Community Development Block Grants - Economic Development",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "CDBGPF",
+                label: "Community Development Block Grants - Public Facilities",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "CHPG",
+                label: "Colorado Heritage Planning Grants",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "CSBG",
+                label: "Community Service Block Grants",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "CTF",
+                label: "Conservation Trust Fund",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "CVRF",
+                label: "Coronovirus Relief Fund",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "DCFA",
+                label: "Defense Counsel on First Appearance",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "EIAF",
+                label: "Energy and Mineral Impact Assistance Fund",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "FCB",
+                label: "Firefighter Cardiac Benefit Program",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "GAME",
+                label: "Local Government Limited Gaming Impact Program",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "GBMJ",
+                label: "Gray and Black Market Marijuana Enforcement Grant",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "IHOP",
+                label: "Innovative Housing Planning Grant Program",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "MJ",
+                label: "Marijuana Impact Grant Programs",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "MS",
+                label: "Main Street Program",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "MSOB",
+                label: "Main Street Program: Open for Business",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "NEU",
+                label: "American Rescue Plan",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "POMH",
+                label: "Peace Officer Mental Health Support Program",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "REDI",
+                label: "Rural Economic Development Initiative",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "RNSS",
+                label: "RNSS",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "SAR",
+                label: "Colorado Search and Rescue Program",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "SBR",
+                label: "Small Business Relief Program",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "SEV_FML",
+                label: "Direct Distribution",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              {
+                fieldName: "VFP",
+                label: "Volunteer Firefighter Pension",
+                format: {
+                  digitSeparator: true,
+                  places: 0
+                },
+              },
+              /* "<b>Community Crime Prevention Initiative:</b>  {CCPI}"+
+              "<b>Community Development Block Grants - Economic Development:</b>  {CDBGED}<br>"+
+              "<b>Community Development Block Grants - Public Facilities:</b>  {CDBGPF}<br>"+
+              "<b>Colorado Heritage Planning Grants:</b>  {CHPG}<br>"+
+              "<b>Community Service Block Grants:</b>  {CSBG}<br>"+
+              "<b>Conservation Trust Fund:</b>  {CTF}<br>"+
+              "<b>Coronovirus Relief Fund:</b>  {CVRF}<br>"+
+              "<b>Defense Counsel on First Appearance:</b>  {DCFA}<br>"+
+              "<b>Energy and Mineral Impact Assistance Fund:</b>  {EIAF}<br>"+
+              "<b>Firefighter Cardiac Benefit Program:</b>  {FCB}<br>"+
+              "<b>Local Government Limited Gaming Impact Program:</b>  {GAME}<br>"+
+              "<b>Gray and Black Market Marijuana Enforcement Grant:</b>  {GBMJ}}<br>"+
+              "<b>Innovative Housing Planning Grant Program:</b>  {IHOP}}<br>"+
+              "<b>Marijuana Impact Grant Programs:</b>  {MJ}<br>"+
+              "<b>Main Street Program:</b>  {MS}<br>"+
+              "<b>Main Street: Open for Business:</b>  {MSOB}<br>"+
+              "<b>American Rescue Plan:</b>  {NEU}<br>"+
+              "<b>Peace Officer Mental Health Support Program:</b>  {POMH}<br>"+
+              "<b>Rural Economic Development Initiative:</b>  {REDI}<br>"+
+              "<b>RNSS:</b>  {RNSS}<br>"+
+              "<b>Colorado Search and Rescue Program:</b>  {SAR}<br>"+
+              "<b>Small Business Relief Program:</b>  {SBR}<br>"+
+              "<b>Direct Distribution:</b>  {SEV_FML}<br>"+
+              "<b>Volunteer Firefighter Pension:</b>  {VFP}<br>" */
+            ]
+          }
+        ]
+      };
         
     const labelClass = {
       // autocasts as new LabelClass()
@@ -67,8 +283,8 @@ require([
     };
     
     var layer = new FeatureLayer({
-        title: "QCEW June 2019 to June 2020 Change",
-        url: "https://services.arcgis.com/IamIM3RJ5xHykalK/arcgis/rest/services/QCEW_June_Changes/FeatureServer/0",
+        title: "Grants Per County 2010-2021",
+        url: "https://services.arcgis.com/IamIM3RJ5xHykalK/arcgis/rest/services/Grants_Map_County/FeatureServer/0",
         popupTemplate: popupQCEW,
         labelingInfo: [labelClass]
     });
@@ -154,8 +370,8 @@ require([
           classSelect = document.getElementById("class-select");
           classSelect.addEventListener("change", generateRenderer);
 
-          numClassesInput = document.getElementById("num-classes");
-          numClassesInput.addEventListener("change", generateRenderer);
+          /* numClassesInput = document.getElementById("num-classes");
+          numClassesInput.addEventListener("change", generateRenderer); */
 
           watchUtils.whenFalseOnce(view, "updating", generateRenderer);
         });
@@ -172,202 +388,32 @@ require([
           const fieldLabel =
             fieldSelect.options[fieldSelect.selectedIndex].text;
           // default to natural-breaks when manual is selected for classification method
-          const classificationMethod =
-            classSelect.value === "manual"
-              ? "natural-breaks"
-              : classSelect.value;
-          var blsrenderer = {
-              type: "class-breaks", // autocasts as new ClassBreaksRenderer()
-              field: fieldSelect.value,
-              numClasses: 11,
-              legendOptions: {
-                  title: "% Job Change "// + fieldLabel
-                },
-              defaultSymbol: {
-                type: "simple-fill", // autocasts as new SimpleFillSymbol()
-                color: "black",
-                style: "backward-diagonal",
-                outline: {
-                  width: 0.5,
-                  color: [50, 50, 50, 0.6]
-                }
-              },
-              defaultLabel: "NA",
-              classBreakInfos: [
-                /*{
-                  minValue: -100,
-                  maxValue: -8.0001,
-                  symbol: {
-                      type: "simple-fill",
-                      style: "solid",
-                      color: "#67001f",
-                      outline: {
-                        color: [50, 50, 50, 0.6],
-                        width: 0.4
-                      },
-                  label: "< -8%" // label for symbol in legend
-                  }
-                },*/
-                {
-                  minValue: -100,
-                  maxValue: -6.0001,
-                   symbol: {
-                      type: "simple-fill",
-                      style: "solid",
-                      color: [255,0,0],
-                      outline: {
-                        color: [50, 50, 50, 0.6],
-                        width: 0.4
-                      },
-                  label: "35 - 50%" // label for symbol in legend
-                   }
-                },
-                {
-                  minValue: -6,
-                  maxValue: -4.0001,
-                   symbol: {
-                      type: "simple-fill",
-                      style: "solid",
-                      color: [255,63,63],
-                      outline: {
-                        color: [50, 50, 50, 0.6],
-                        width: 0.4
-                      },
-                  label: "50 - 75%" // label for symbol in legend
-                   }
-                },
-                {
-                  minValue: -4,
-                  maxValue: -2.0001,
-                   symbol: {
-                      type: "simple-fill",
-                      style: "solid",
-                      color: [255,127,127],
-                      outline: {
-                        color: [50, 50, 50, 0.6],
-                        width: 0.4
-                      },
-                  label: "> 75%" // label for symbol in legend
-                   }
-                },
-                {
-                  minValue: -2,
-                  maxValue: 0.0001,
-                   symbol: {
-                      type: "simple-fill",
-                      style: "solid",
-                      color: [255,191,191],
-                      outline: {
-                        color: [50, 50, 50, 0.6],
-                        width: 0.4
-                      },
-                  label: "> 75%" // label for symbol in legend
-                   }
-                },
-                {
-                  minValue: 0,
-                  maxValue: 0,
-                   symbol: {
-                      type: "simple-fill",
-                      style: "solid",
-                      color: [255,255,255],
-                      outline: {
-                        color: [50, 50, 50, 0.6],
-                        width: 0.4
-                      },
-                  label: "> 75%" // label for symbol in legend
-                   }
-                },
-                {
-                  minValue: .0001,
-                  maxValue: 2,
-                   symbol: {
-                      type: "simple-fill",
-                      style: "solid",
-                      color: [191,191,255],
-                      outline: {
-                        color: [50, 50, 50, 0.6],
-                        width: 0.4
-                      },
-                  label: "> 75%" // label for symbol in legend
-                   }
-                },
-                {
-                  minValue: 2.0001,
-                  maxValue: 4,
-                   symbol: {
-                      type: "simple-fill",
-                      style: "solid",
-                      color: [127,127,255],
-                      outline: {
-                        color: [50, 50, 50, 0.6],
-                        width: 0.4
-                      },
-                  label: "> 75%" // label for symbol in legend
-                   }
-                },
-                {
-                  minValue: 4.0001,
-                  maxValue: 6,
-                   symbol: {
-                      type: "simple-fill",
-                      style: "solid",
-                      color: [63,63,255],
-                      outline: {
-                        color: [50, 50, 50, 0.6],
-                        width: 0.4
-                      },
-                  label: "> 75%" // label for symbol in legend
-                   }
-                },
-                {
-                  minValue: 6.0001,
-                  maxValue: 100,
-                   symbol: {
-                     type: "simple-fill",
-                      style: "solid",
-                      color: [0,0,255],
-                      outline: {
-                        color: [50, 50, 50, 0.6],
-                        width: 0.4
-                      },
-                  label: "> 75%" // label for symbol in legend
-                   }
-                }/*,
-                {
-                  minValue: 8.0001,
-                  maxValue: 100,
-                   symbol: {
-                      type: "simple-fill",
-                      style: "solid",
-                      color: "#053061",
-                      outline: {
-                        color: [50, 50, 50, 0.6],
-                        width: 0.4
-                      },
-                  label: "> 75%" // label for symbol in legend
-                   }
-                }*/
-              ]
-            };
-
-          if (classSelect.value === "bls") {
-           layer.renderer = blsrenderer;
-            map.add(layer);
-          } else {   
+          const classMethod ="natural-breaks";
+          
+          if (classSelect.value === "equal-interval") {
+            normField = "Population";
+            legTitle = "Dollars Per Capita"
+          }else{
+            normField = "";
+            legTitle = "Dollars"
+          };
+   
               const params = {
                 layer: layer,
-                valueExpression: getValueExpression(fieldSelect.value),
+                //valueExpression: getValueExpression(fieldSelect.value/layer.Population),
+                field: fieldSelect.value,
                 view: view,
-                classificationMethod: classificationMethod,
-                numClasses: parseInt(numClassesInput.value),
+                classificationMethod: classMethod,
+                normalizationField: normField,
+                numClasses: 6,
+                defaultLabel: "0",
                 legendOptions: {
-                  title: "% Job Change "// + fieldLabel
+                  title: legTitle,
                 },
                 colorScheme: {
                   id: "above-and-below/gray/div-blue-red",
                   colors: [[255,0,0],[255,127,127],[255,255,255],[127,127,255],[0,0,255]],
-                  noDataColor: [0,0,0],
+                  noDataColor: [200,200,200],
                   colorsForClassBreaks: [
                     {
                       colors: [[255,0,0]],
@@ -385,7 +431,7 @@ require([
                       colors: [[255,0,0],[255,127,127],[255,255,255],[127,127,255],[0,0,255]],
                       numClasses: 5
                     }, {
-                      colors: [[255,0,0],[255,85,85],[255,170,170],[255,255,255],[127,127,255],[0,0,255]],
+                      colors: [[240,249,232],[204,235,197],[168,221,181],[123,204,196],[67,162,202],[8,104,172]],
                       numClasses: 6
                     }, {
                       colors: [[255,0,0],[255,85,85],[255,170,170],[255,255,255],[170,170,255],[85,85,255],[0,0,255]],
@@ -419,84 +465,14 @@ require([
             .createClassBreaksRenderer(params)
             .then(function (rendererResponse) {
               layer.renderer = rendererResponse.renderer;
-
+              layer.renderer.defaultLabel = "0";
               if (!map.layers.includes(layer)) {
                 map.add(layer);
               }
 
-              if (classSelect.value === "manual") {
-                // if manual is selected, then add or update
-                // a classed color slider to allow the user to
-                // construct manual class breaks
-                updateColorSlider(rendererResponse);
-              } else {
-                destroySlider();
-              }
             });
 
           }
-        }
-
-        // If manual classification method is selected, then create
-        // a classed color slider to allow user to manually modify
-        // the class breaks starting with the generated renderer
-
-        function updateColorSlider(rendererResult) {
-          histogram({
-            layer: layer,
-            valueExpression: getValueExpression(fieldSelect.value),
-            view: view,
-            numBins: 100
-          }).then(function (histogramResult) {
-            if (!slider) {
-              const sliderContainer = document.createElement("div");
-              const container = document.createElement("div");
-              container.id = "containerDiv";
-              container.appendChild(sliderContainer);
-              view.ui.add(container, "bottom-right");
-
-              slider = ClassedColorSlider.fromRendererResult(
-                rendererResult,
-                histogramResult
-              );
-              slider.container = container;
-              slider.viewModel.precision = 1;
-
-              function changeEventHandler() {
-                const renderer = layer.renderer.clone();
-                renderer.classBreakInfos = slider.updateClassBreakInfos(
-                  renderer.classBreakInfos
-                );
-                layer.renderer = renderer;
-              }
-
-              slider.on(
-                ["thumb-change", "thumb-drag", "min-change", "max-change"],
-                changeEventHandler
-              );
-            } else {
-              slider.updateFromRendererResult(rendererResult, histogramResult);
-            }
-          });
-        }
-
-        function destroySlider() {
-          if (slider) {
-            const container = document.getElementById("containerDiv");
-            view.ui.remove(container);
-            slider.container = null;
-            slider = null;
-            container = null;
-          }
-        }
-
-
-
-
-    
-     
-    
-    
 });
 
     
