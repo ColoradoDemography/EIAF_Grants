@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>Year to Year Job Change in Colorado</title>
+    <title>Grants by County</title>
     <link rel="stylesheet" href="https://js.arcgis.com/4.17/esri/themes/dark/main.css">
     <script src="https://js.arcgis.com/4.17/"></script>
     <style>
@@ -25,32 +25,44 @@
     <body>
     <div id="viewDiv"></div>
     <div id="infoDiv" class="esri-widget">
-      Select Industry:
+      Select Grant Type:
       <select id="field-select" class="esri-widget">
-        <option value="Total" selected>All Industries</option>
-        <option value="Goods">&#160;Goods-Producing</option>
-        <option value="NatRes">&#160;&#160;Natural Resources & Mining</option>
-        <option value="Const">&#160;&#160;Construction</option>
-        <option value="Manuf">&#160;&#160;Manufacturing</option>
-        <option value="Service">&#160;Service-Providing</option>
-        <option value="Trade">&#160;&#160;Trade, Transportation & Utilities</option>
-        <option value="Inform">&#160;&#160;Information</option>
-        <option value="Finance">&#160;&#160;Financial Activities</option>
-        <option value="Prof">&#160;&#160;Professional & Business Services</option>
-        <option value="Education">&#160;&#160;Education & Health</option>
-        <option value="Leisure">&#160;&#160;Leisure & Hospitality</option>
-        <option value="OtherServ">&#160;&#160;Other Services</option>
+        <option value="TOTAL" selected>All Grants</option>
+        <option value="CCPI">&#160;Community Crime Prevention Initiative</option>
+        <option value="CDBGED">&#160;Community Development Block Grants - Economic Development</option>
+        <option value="CDBGPF">&#160;Community Development Block Grants - Public Facilities</option>
+        <option value="CHPG">&#160;Colorado Heritage Planning Grants</option>
+        <option value="CSBG">&#160;Community Service Block Grants</option>
+        <option value="CTF">&#160;Conservation Trust Fund</option>
+        <option value="CVRF">&#160;Coronovirus Relief Fund</option>
+        <option value="DCFA">&#160;Defense Counsel on First Appearance</option>
+        <option value="EIAF">&#160;Energy and Mineral Impact Assistance Fund</option>
+        <option value="FCB">&#160;Firefighter Cardiac Benefit Program</option>
+        <option value="GAME">&#160;Local Government Limited Gaming Impact Program</option>
+        <option value="GBMJ">&#160;Gray and Black Market Marijuana Enforcement Grant</option>
+        <option value="IHOP">&#160;Innovative Housing Planning Grant Program</option>
+        <option value="MJ">&#160;Marijuana Impact Grant Programs</option>
+        <option value="MS">&#160;Main Street Program</option>
+        <option value="MSOB">&#160;Main Street: Open for Business</option>
+        <option value="NEU">&#160;American Rescue Plan</option>
+        <option value="POMH">&#160;Peace Officer Mental Health Support Program</option>
+        <option value="REDI">&#160;Rural Economic Development Initiative</option>
+        <option value="RNSS">&#160;RNSS</option>
+        <option value="SAR">&#160;Colorado Search and Rescue Program</option>
+        <option value="SBR">&#160;Small Business Relief Program</option>
+        <option value="SEV_FML">&#160;Direct Distribution</option>
+        <option value="VFP">&#160;Volunteer Firefighter Pension</option>
         <!--<option value="Unclass">&#160;Unclassified</option>-->
       </select>
       Classification:
       <select id="class-select" class="esri-widget">
-        <option value="bls" selected>Fixed (9 breaks only)</option>
-<!--        <option value="equal-interval">Equal interval</option>
-        <option value="quantile">Quantile</option>
-        <option value="natural-breaks">Natural Breaks</option>-->
-        <option value="manual">Manual</option>
+        <option value="manual" selected>Dollars</option>
+        <option value="equal-interval">Per Capita</option>
+        <!--<option value="quantile">Quantile</option>
+        <option value="natural-breaks">Natural Breaks</option>
+        <option value="manual">Manual</option>-->
       </select>
-      Breaks:
+      <!-- Breaks:
       <input
         type="number"
         id="num-classes"
@@ -58,7 +70,7 @@
         value="9"
         min="2"
         max="9"
-      />
+      /> -->
     </div>
   </body>
 </html>
