@@ -390,10 +390,16 @@ require([
           // default to natural-breaks when manual is selected for classification method
           const classMethod ="natural-breaks";
           
-          if (classSelect.value === "equal-interval") {
+         if (classSelect.value === "equal-interval") {
             normField = "Population";
             legTitle = "Dollars Per Capita"
-          }else{
+          }else if(classSelect.value === "poverty"){
+            normField = "PovPop";
+            legTitle = "Dollars"
+          }else if(classSelect.value === "bipoc"){
+            normField = "BIPOC";
+            legTitle = "Dollars"
+          }          else{
             normField = "";
             legTitle = "Dollars"
           };
