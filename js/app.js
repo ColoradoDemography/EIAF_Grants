@@ -31,7 +31,7 @@ require([
     let fieldSelect, classSelect, numClassesInput, slider;
     
      var popupQCEW = {
-        title: "{County} County Grant Money 2010-2021",
+        title: "{County} County Grant Money 2012-2021",
         content: [
           {
             type: "fields",
