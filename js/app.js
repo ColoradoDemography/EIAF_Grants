@@ -278,7 +278,7 @@ require([
       },
       labelPlacement: "above-center",
       labelExpressionInfo: {
-        expression: "$feature.NAME + TextFormatting.NewLine + $feature.PovQuartile"
+        expression: "$feature.NAME + TextFormatting.NewLine + $feature.PovPct+'%'"
       }
     };
     
