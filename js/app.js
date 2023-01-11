@@ -283,7 +283,7 @@ require([
     };
     
     var layer = new FeatureLayer({
-        title: "Grants Per County 2012-2021 (Number in Label Represents Poverty Quartile",
+        title: "Grants Per County 2012-2021 (Number in Label Percent below 200% of Poverty Level",
         url: "https://services.arcgis.com/IamIM3RJ5xHykalK/arcgis/rest/services/Grants_Map_County/FeatureServer/0",
         popupTemplate: popupQCEW,
         labelingInfo: [labelClass]
