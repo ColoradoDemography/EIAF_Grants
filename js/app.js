@@ -321,7 +321,7 @@ require([
       content: legend,
       expandIconClass: "esri-icon-documentation",
       expandTooltip: "Legend",
-      expanded: True
+      expanded: true
     });
     
     var print = new Print({
