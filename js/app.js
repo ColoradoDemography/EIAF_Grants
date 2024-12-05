@@ -31,12 +31,12 @@ require([
     let fieldSelect, classSelect, numClassesInput, slider;
     
      var popupQCEW = {
-        title: "{County} County Grant Money 2012-2021",
+        title: "{County} County Grant Money 2018-2023",
         content: [
           {
             type: "fields",
             fieldInfos: [
-              {
+              /*{
                 fieldName: "TOTAL",
                 label: "All Grants",
                 format: {
@@ -107,7 +107,7 @@ require([
                   digitSeparator: true,
                   places: 0
                 },
-              },
+              },*/
               {
                 fieldName: "EIAF",
                 label: "Energy and Mineral Impact Assistance Fund",
@@ -116,7 +116,7 @@ require([
                   places: 0
                 },
               },
-              {
+              /* {
                 fieldName: "FCB",
                 label: "Firefighter Cardiac Benefit Program",
                 format: {
@@ -236,7 +236,7 @@ require([
                   places: 0
                 },
               },
-              /* "<b>Community Crime Prevention Initiative:</b>  {CCPI}"+
+              "<b>Community Crime Prevention Initiative:</b>  {CCPI}"+
               "<b>Community Development Block Grants - Economic Development:</b>  {CDBGED}<br>"+
               "<b>Community Development Block Grants - Public Facilities:</b>  {CDBGPF}<br>"+
               "<b>Colorado Heritage Planning Grants:</b>  {CHPG}<br>"+
@@ -394,12 +394,12 @@ require([
          if (classSelect.value === "equal-interval") {
             normField = "Population";
             legTitle = "Dollars Per Capita"
-          }else if(classSelect.value === "poverty"){
-            normField = "PovPop";
-            legTitle = "Dollars"
-          }else if(classSelect.value === "bipoc"){
+          }else if(classSelect.value === "awards"){
+            normField = "Awards";
+            legTitle = "Awards"
+          /*}else if(classSelect.value === "bipoc"){
             normField = "BIPOC";
-            legTitle = "Dollars"
+            legTitle = "Dollars"*/
           }          else{
             normField = "";
             legTitle = "Dollars"
