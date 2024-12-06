@@ -31,235 +31,47 @@ require([
     let fieldSelect, classSelect, numClassesInput, slider;
     
      var popupQCEW = {
-        title: "{County} County Grant Money 2018-2023",
+        title: "{NAME10} County Grant Money 2018-2024",
         content: [
           {
             type: "fields",
             fieldInfos: [
-              /*{
-                fieldName: "TOTAL",
-                label: "All Grants",
+              {
+                fieldName: "EIAFTotal",
+                label: "Energy and Mineral Impact Assistance Fund Dollars",
                 format: {
                   digitSeparator: true,
                   places: 0
                 },
               },
               {
-                fieldName: "CCPI",
-                label: "Community Crime Prevention Initiative",
+                fieldName: "Population",
+                label: "Population",
                 format: {
                   digitSeparator: true,
                   places: 0
                 },
               },
               {
-                fieldName: "CDBGED",
-                label: "Community Development Block Grants - Economic Development",
+                fieldName: "EIAFPerCap",
+                label: "EIAF Dollars Per Person",
                 format: {
                   digitSeparator: true,
                   places: 0
                 },
               },
               {
-                fieldName: "CDBGPF",
-                label: "Community Development Block Grants - Public Facilities",
+                fieldName: "EIAF_Count",
+                label: "Number of EIAF Awards",
                 format: {
                   digitSeparator: true,
                   places: 0
                 },
               },
-              {
-                fieldName: "CHPG",
-                label: "Colorado Heritage Planning Grants",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "CSBG",
-                label: "Community Service Block Grants",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "CTF",
-                label: "Conservation Trust Fund",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "CVRF",
-                label: "Coronovirus Relief Fund",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "DCFA",
-                label: "Defense Counsel on First Appearance",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },*/
-              {
-                fieldName: "EIAF",
-                label: "Energy and Mineral Impact Assistance Fund",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              /* {
-                fieldName: "FCB",
-                label: "Firefighter Cardiac Benefit Program",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "GAME",
-                label: "Local Government Limited Gaming Impact Program",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "GBMJ",
-                label: "Gray and Black Market Marijuana Enforcement Grant",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "IHOP",
-                label: "Innovative Housing Planning Grant Program",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "MJ",
-                label: "Marijuana Impact Grant Programs",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "MS",
-                label: "Main Street Program",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "MSOB",
-                label: "Main Street Program: Open for Business",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "NEU",
-                label: "American Rescue Plan",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "POMH",
-                label: "Peace Officer Mental Health Support Program",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "REDI",
-                label: "Rural Economic Development Initiative",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "RNSS",
-                label: "RNSS",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "SAR",
-                label: "Colorado Search and Rescue Program",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "SBR",
-                label: "Small Business Relief Program",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "SEV_FML",
-                label: "Direct Distribution",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              {
-                fieldName: "VFP",
-                label: "Volunteer Firefighter Pension",
-                format: {
-                  digitSeparator: true,
-                  places: 0
-                },
-              },
-              "<b>Community Crime Prevention Initiative:</b>  {CCPI}"+
-              "<b>Community Development Block Grants - Economic Development:</b>  {CDBGED}<br>"+
-              "<b>Community Development Block Grants - Public Facilities:</b>  {CDBGPF}<br>"+
-              "<b>Colorado Heritage Planning Grants:</b>  {CHPG}<br>"+
-              "<b>Community Service Block Grants:</b>  {CSBG}<br>"+
-              "<b>Conservation Trust Fund:</b>  {CTF}<br>"+
-              "<b>Coronovirus Relief Fund:</b>  {CVRF}<br>"+
-              "<b>Defense Counsel on First Appearance:</b>  {DCFA}<br>"+
-              "<b>Energy and Mineral Impact Assistance Fund:</b>  {EIAF}<br>"+
-              "<b>Firefighter Cardiac Benefit Program:</b>  {FCB}<br>"+
-              "<b>Local Government Limited Gaming Impact Program:</b>  {GAME}<br>"+
-              "<b>Gray and Black Market Marijuana Enforcement Grant:</b>  {GBMJ}}<br>"+
-              "<b>Innovative Housing Planning Grant Program:</b>  {IHOP}}<br>"+
-              "<b>Marijuana Impact Grant Programs:</b>  {MJ}<br>"+
-              "<b>Main Street Program:</b>  {MS}<br>"+
-              "<b>Main Street: Open for Business:</b>  {MSOB}<br>"+
-              "<b>American Rescue Plan:</b>  {NEU}<br>"+
-              "<b>Peace Officer Mental Health Support Program:</b>  {POMH}<br>"+
-              "<b>Rural Economic Development Initiative:</b>  {REDI}<br>"+
-              "<b>RNSS:</b>  {RNSS}<br>"+
-              "<b>Colorado Search and Rescue Program:</b>  {SAR}<br>"+
-              "<b>Small Business Relief Program:</b>  {SBR}<br>"+
-              "<b>Direct Distribution:</b>  {SEV_FML}<br>"+
-              "<b>Volunteer Firefighter Pension:</b>  {VFP}<br>" */
+              /* "<b>Energy and Mineral Impact Assistance Fund Dollars:</b>  {EIAFTotal}<br>"+
+              "<b>Population:</b>  {Population}<br>"+
+              "<b>EIAF Dollars Per Person:</b>  {EIAFPerCap}<br>"+
+              "<b>EIAF Awards:</b>  {EIAF_Total}}<br>" */
             ]
           }
         ]
@@ -278,13 +90,13 @@ require([
       },
       labelPlacement: "above-center",
       labelExpressionInfo: {
-        expression: "$feature.NAME + TextFormatting.NewLine + $feature.PovPct+'%'"
+        expression: "$feature.NAME10"
       }
     };
     
     var layer = new FeatureLayer({
-        title: "Grants Per County 2012-2021 (Number in Label Percent below 200% of Poverty Level",
-        url: "https://services.arcgis.com/IamIM3RJ5xHykalK/arcgis/rest/services/Grants_Map_County/FeatureServer/0",
+        title: "EIAF Awards Per County 2018-2024",
+        url: "https://services.arcgis.com/IamIM3RJ5xHykalK/arcgis/rest/services/EIAF_County/FeatureServer/0",
         popupTemplate: popupQCEW,
         labelingInfo: [labelClass]
     });
@@ -368,9 +180,9 @@ require([
           fieldSelect = document.getElementById("field-select");
           fieldSelect.addEventListener("change", generateRenderer);
 
-          classSelect = document.getElementById("class-select");
+          /* classSelect = document.getElementById("class-select");
           classSelect.addEventListener("change", generateRenderer);
-
+ */
           /* numClassesInput = document.getElementById("num-classes");
           numClassesInput.addEventListener("change", generateRenderer); */
 
@@ -391,17 +203,17 @@ require([
           // default to natural-breaks when manual is selected for classification method
           const classMethod ="natural-breaks";
           
-         if (classSelect.value === "equal-interval") {
-            normField = "Population";
+         if (fieldSelect.value === "EIAFPerCap") {
+            //normField = "EIAFPerCap";
             legTitle = "Dollars Per Capita"
-          }else if(classSelect.value === "awards"){
-            normField = "Awards";
+          }else if(fieldSelect.value === "EIAF_Count"){
+            //normField = "EIAF_Count";
             legTitle = "Awards"
-          /*}else if(classSelect.value === "bipoc"){
-            normField = "BIPOC";
-            legTitle = "Dollars"*/
+          }else if(fieldSelect.value === "EIAFTotal"){
+            //normField = "BIPOC";
+            legTitle = "Total Dollars"
           }          else{
-            normField = "";
+            //normField = "EIAFTotal";
             legTitle = "Dollars"
           };
    
@@ -411,7 +223,7 @@ require([
                 field: fieldSelect.value,
                 view: view,
                 classificationMethod: classMethod,
-                normalizationField: normField,
+                //normalizationField: normField,
                 numClasses: 6,
                 defaultLabel: "0",
                 legendOptions: {
