@@ -145,7 +145,7 @@ require([
         expandTooltip: "Print"
     })
     
-    view.ui.add([expand2], "bottom-right");
+    //view.ui.add([expand2], "bottom-right");
    // view.ui.add([expand2], "bottom-right");
     
     /*view.ui.add(
