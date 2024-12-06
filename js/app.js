@@ -136,12 +136,7 @@ require([
       expanded: true
     });
     
-    var print = new Print({
-        view: view,
-        // specify your own print service
-        printServiceUrl:
-          "https://dola-online.maps.arcgis.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
-      });
+    
     
     var expand2 = new Expand({
         view: view,
